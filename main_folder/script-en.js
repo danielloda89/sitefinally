@@ -63,7 +63,17 @@ const modalSpecsName = document.getElementById("modalSpecsName");
 const modalDescription = document.getElementById("modalDescription");
 const modalSpecs = document.getElementById("modalSpecs");
 const closeBtn = document.querySelector(".close-btn");
+const modalContent = document.querySelector(".modal-content");
 const productCards = document.querySelectorAll(".product-card");
+
+function closeModal() {
+  if (!modal) {
+    return;
+  }
+
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+}
 
 productCards.forEach((card) => {
   card.addEventListener("click", function () {
@@ -111,22 +121,35 @@ productCards.forEach((card) => {
 });
 
 if (closeBtn && modal) {
-  closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
+  ["click", "touchend"].forEach((eventName) => {
+    closeBtn.addEventListener(eventName, function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+      closeModal();
+    });
   });
 }
 
-window.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
-  }
-});
+if (modal && modalContent) {
+  ["click", "touchend"].forEach((eventName) => {
+    modal.addEventListener(eventName, function (event) {
+      if (!modalContent.contains(event.target)) {
+        closeModal();
+      }
+    });
+  });
+}
+
+if (modalContent) {
+  ["click", "touchend"].forEach((eventName) => {
+    modalContent.addEventListener(eventName, function (event) {
+      event.stopPropagation();
+    });
+  });
+}
 
 document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && modal.style.display !== "none") {
-    modal.style.display = "none";
-    document.body.style.overflow = "auto";
+  if (event.key === "Escape" && modal && modal.style.display !== "none") {
+    closeModal();
   }
 });

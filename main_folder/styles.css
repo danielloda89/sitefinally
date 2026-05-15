@@ -201,7 +201,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 0.16em;
     font-size: 12px;
-    color: var(--color-accent);
+    color: #DCCFAF;
     font-weight: 800;
 }
 h1 {
@@ -211,6 +211,16 @@ h1 {
     line-height: 1.15;
     margin: 0 0 1rem 0;
 }
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  max-width: 20ch;
+  line-height: 1.15;
+  margin: 0 0 1rem 0;
+  color: #A8D85A;
+}
+
 h2 {
     font-family: "Cormorant Garamond", serif;
     font-size: clamp(2rem, 4vw, 3.4rem);
@@ -222,7 +232,9 @@ h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
-.hero-text,
+.hero-text{
+  color: #DCCFAF;
+}
 .section-heading p,
 .product-card p,
 .logistics-panel p {
@@ -567,6 +579,27 @@ h3 {
 }
 .modal-header.modal-header--fit::before {
     display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .modal-img {
