@@ -35,7 +35,11 @@
                     />
                     <!--<span class="logo-slot" aria-hidden="true"> </span>-->
                 </a>
-                <nav class="main-nav" aria-label="Основное меню">
+                <nav
+                    class="main-nav"
+                    id="primary-nav"
+                    aria-label="Основное меню"
+                >
                     <a href="#products">Продукция</a>
                     <a href="#advantage">Почему мы</a>
                     <a href="#cycle">Цикл</a>
@@ -43,6 +47,17 @@
                     <a href="#contacts">Контакты</a>
                 </nav>
                 <div class="header-actions">
+                    <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Toggle navigation"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <a
                         class="language-toggle"
                         href="../en/"

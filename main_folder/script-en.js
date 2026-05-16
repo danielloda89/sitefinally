@@ -1,4 +1,32 @@
 (function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const mainNav = document.querySelector(".main-nav");
+  const navLinks = document.querySelectorAll(".main-nav a");
+
+  if (menuToggle && mainNav) {
+    const syncMenu = (isOpen) => {
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      mainNav.classList.toggle("is-open", isOpen);
+    };
+
+    syncMenu(false);
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+      syncMenu(isOpen);
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => syncMenu(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 720) {
+        syncMenu(false);
+      }
+    });
+  }
+
   const reveals = document.querySelectorAll(".reveal");
   const observer = new IntersectionObserver(
     (entries) => {

@@ -34,7 +34,11 @@
                         class="navbar-logo"
                     />
                 </a>
-                <nav class="main-nav" aria-label="Primary navigation">
+                <nav
+                    class="main-nav"
+                    id="primary-nav"
+                    aria-label="Primary navigation"
+                >
                     <a href="#products">Products</a>
                     <a href="#advantage">Why us</a>
                     <a href="#cycle">Cycle</a>
@@ -42,6 +46,17 @@
                     <a href="#contacts">Contacts</a>
                 </nav>
                 <div class="header-actions">
+                    <button
+                        class="menu-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="primary-nav"
+                        aria-label="Toggle navigation"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <a
                         class="language-toggle"
                         href="./index.html"
