@@ -259,7 +259,15 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 0.16em;
     font-size: 12px;
-    color: #DCCFAF;
+    color: #dccfaf;
+    font-weight: 800;
+}
+.eyebrow-footer {
+    margin: 0 0 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 12px;
+    color: rgb(74, 107, 58);
     font-weight: 800;
 }
 h1 {
@@ -271,12 +279,12 @@ h1 {
 }
 
 .title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(3rem, 6vw, 5.5rem);
-  max-width: 20ch;
-  line-height: 1.15;
-  margin: 0 0 1rem 0;
-  color: #A8D85A;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    max-width: 20ch;
+    line-height: 1.15;
+    margin: 0 0 1rem 0;
+    color: #a8d85a;
 }
 
 h2 {
@@ -290,8 +298,8 @@ h3 {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
 }
-.hero-text{
-  color: #DCCFAF;
+.hero-text {
+    color: #dccfaf;
 }
 .section-heading p,
 .product-card p,
