@@ -488,6 +488,27 @@ h3 {
     position: relative;
     z-index: 1;
 }
+.logistics-shell {
+    display: flex;
+    align-items: center;
+    min-height: 420px;
+}
+.logistics-spotlight {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+.logistics-spotlight h2 {
+    margin: 0;
+    max-width: none;
+    width: 100%;
+}
+.logistics-text {
+    margin: 22px 0 0;
+    max-width: 72ch;
+    color: var(--color-text-muted);
+    font-size: 1.02rem;
+}
 .logistics-panel {
     padding: 32px;
     border-radius: var(--radius);
@@ -901,6 +922,12 @@ h3 {
     .section {
         padding: 40px 0;
     }
+    .logistics-shell {
+        min-height: 360px;
+    }
+    .logistics-spotlight {
+        padding: 0;
+    }
     .advantage-card {
         padding: 1.5rem;
     }
@@ -945,6 +972,12 @@ h3 {
     }
     .main-nav a {
         padding: 9px 10px;
+    }
+    .logistics-spotlight h2 {
+        max-width: none;
+    }
+    .logistics-text {
+        font-size: 0.96rem;
     }
     .theme-toggle,
     .menu-toggle,
